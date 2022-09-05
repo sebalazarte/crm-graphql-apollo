@@ -10,7 +10,9 @@
   "author": "Andres Sebastian Lazarte",
   "license": "ISC",
   "dependencies": {
-    "apollo-server": "^3.10.2"
+    "apollo-server": "^3.10.2",
+    "dotenv": "^16.0.2",
+    "mongoose": "^6.5.4"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
