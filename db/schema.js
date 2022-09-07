@@ -11,6 +11,14 @@ const typeDefs = gql`
         creado: String
     }
 
+    type Producto {
+        id: ID,
+        nombre: String
+        existencia: Int
+        precio: Float
+        creado: String
+    }
+
     type Token {
         token: String
     }
@@ -20,6 +28,12 @@ const typeDefs = gql`
         apellido: String!
         email: String!
         password: String!
+    }
+
+    input ProductoInput {
+        nombre: String!
+        existencia: Int!
+        precio: Float!
     }
 
     input AutenticarInput {
@@ -32,8 +46,12 @@ const typeDefs = gql`
     }
 
     type Mutation {
+        #Usuarios
         nuevoUsuario(input: UsuarioInput): Usuario,
         autenticarUsuario(input: AutenticarInput): Token,
+
+        #Productos
+        nuevoProducto(input: ProductoInput): Producto
     }
 
 `;
